@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="transactions.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">SmartExpense</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><a href="budgeting.html">Budgeting</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">Transactions</div>
+        <ul class="sidebar-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html" class="active">Transactions</a></li>
+            <li><a href="add_transaction.html">Add Transaction</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <h1>Transactions</h1>
+        </header>
+
+        <!-- Filters Section -->
+        <section class="filters">
+            <input type="text" id="search" placeholder="Search transactions..." class="search-input">
+            <select id="category-filter" class="filter-select">
+                <option value="">All Categories</option>
+                <option value="Food">Food</option>
+                <option value="Rent">Rent</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Travel">Travel</option>
+            </select>
+        </section>
+
+        <!-- Transactions Table -->
+        <section class="transactions">
+            <table id="transactions-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Payment Method</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transactions-list">
+                    <!-- Transactions will be dynamically loaded here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add Transaction Section -->
+        <section class="add-transaction">
+            <h2>Add New Transaction</h2>
+            <form id="transaction-form">
+                <input type="date" id="date" required>
+                <input type="text" id="description" placeholder="Description" required>
+                <select id="category" required>
+                    <option value="Food">Food</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Travel">Travel</option>
+                </select>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="payment-method" required>
+                    <option value="Card">Card</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                </select>
+                <button type="submit" class="add-btn">Add Transaction</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="transactions.js"></script>
+</body>
+
+</html>

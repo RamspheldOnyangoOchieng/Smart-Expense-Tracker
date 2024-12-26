@@ -1,0 +1,267 @@
+/* General Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #2d3e50;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav .nav-links li a:hover,
+nav .nav-links li a.active {
+    text-decoration: underline;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #34495e;
+    width: 220px;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar .logo {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar .sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .sidebar-links li {
+    padding: 15px 20px;
+}
+
+.sidebar .sidebar-links li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar .sidebar-links li a:hover,
+.sidebar .sidebar-links li a.active {
+    background-color: #1abc9c;
+}
+
+/* Main Dashboard Styles */
+.dashboard {
+    margin-left: 240px;
+    padding: 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header .welcome-message h1 {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+.header .logout-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header .logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Key Metrics Styles */
+.key-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.key-metrics .metric {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.key-metrics .metric h3 {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+.key-metrics .metric p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Chart Container Styles */
+.analytics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.analytics .chart-container {
+    width: 48%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Recent Transactions */
+.recent-transactions {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#search {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#category-filter {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Goals Tracker Styles */
+.goals-tracker {
+    margin-bottom: 40px;
+}
+
+.goals-tracker .goal {
+    margin-bottom: 20px;
+}
+
+.goals-tracker .goal p {
+    font-size: 1.2em;
+}
+
+.goals-tracker .goal-progress {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+}
+
+.goals-tracker .progress-bar {
+    background-color: #1abc9c;
+    height: 100%;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2d3e50;
+    color: white;
+}
+@media (max-width: 768px) {
+    .dashboard {
+        margin-left: 0;
+    }
+
+    .key-metrics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .key-metrics .metric {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .analytics {
+        flex-direction: column;
+    }
+
+    .chart-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
